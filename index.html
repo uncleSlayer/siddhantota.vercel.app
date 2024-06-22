@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhant Ota - Resume</title>
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #020817;
+            --card: #ffffff;
+            --card-foreground: #020817;
+            --primary: #0f172a;
+            --primary-foreground: #f8fafc;
+            --muted: #f1f5f9;
+            --muted-foreground: #64748b;
+            --accent: #f1f5f9;
+            --accent-foreground: #0f172a;
+            --border: #e2e8f0;
+        }
+        .dark {
+            --background: #000000;
+            --foreground: #ffffff;
+            --card: #020817;
+            --card-foreground: #ffffff;
+            --primary: #f8fafc;
+            --primary-foreground: #0f172a;
+            --muted: #1e293b;
+            --muted-foreground: #94a3b8;
+            --accent: #1e293b;
+            --accent-foreground: #f8fafc;
+            --border: #1e293b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--muted-foreground);
+        }
+        .section {
+            background-color: var(--card);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .project {
+            margin-bottom: 1rem;
+        }
+        .project h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .project p {
+            margin-top: 0;
+            color: var(--muted-foreground);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill {
+            background-color: var(--accent);
+            color: var(--accent-foreground);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--foreground);
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted-foreground);
+        }
+        .ai-statement {
+            font-style: italic;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Siddhant Ota</h1>
+            <div class="contact-info">
+                +91 8327793515 | siddhantota@protonmail.com | <a href="https://github.com/uncleSlayer">GitHub</a>
+            </div>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    </header>
+
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <h3>Frontend Technologies</h3>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">React.js</span>
+            <span class="skill">Next.js</span>
+            <span class="skill">Tailwind CSS</span>
+        </div>
+        <h3>Backend Technologies</h3>
+        <div class="skills">
+            <span class="skill">Node.js</span>
+            <span class="skill">Express.js</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">MongoDB</span>
+        </div>
+        <h3>Other Technologies</h3>
+        <div class="skills">
+            <span class="skill">AWS</span>
+            <span class="skill">Git</span>
+            <span class="skill">Linux CLI</span>
+            <span class="skill">Docker</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Freelance Experience</h2>
+        <div class="project">
+            <h3>Bakery Zone</h3>
+            <p>Food ordering webapp for a local restaurant owner</p>
+            <ul>
+                <li>Developed with Next.js, TypeScript, and Tailwind CSS</li>
+                <li>Implemented Tanstack Query, Zod, and Lucia Auth</li>
+                <li>Used PostgreSQL with Drizzle ORM</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Qmin Foodworld</h3>
+            <p>Exporter and importer of fine Basmati rice</p>
+            <ul>
+                <li>Built with Next.js 13, TypeScript, and Tailwind CSS</li>
+                <li>Integrated Sanity CMS and Mongoose ORM</li>
+                <li>Implemented static generation for dynamic routes</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Superchat</h3>
+            <ul>
+                <li>Full-featured chat application using Next.js 14 and TypeScript</li>
+                <li>Implemented real-time websockets and NextAuth</li>
+                <li>Scaled with Redis Pub/Sub and PostgreSQL</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Spam Sanhaarkarta</h3>
+            <ul>
+                <li>Discord bot using TypeScript and Discord.js</li>
+                <li>Integrated Groq's Llama3-8b LLM for message analysis</li>
+                <li>Automated user banning for rule violations</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <p>100x devs bootcamp - Live Full Stack Open Source Cohort 1</p>
+    </div>
+
+    <footer>
+        <p>Generated by Claude</p>
+        <p class="ai-statement">"Embracing AI in development isn't just about efficiency—it's about pushing the boundaries of what's possible and crafting innovative solutions that were once beyond our reach."</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
